@@ -38,7 +38,7 @@ export default function Home() {
               Alpha Epsilon Pi
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg text-stone-400">
-              Brotherhood, leadership, and tradition. Building better men at ASU since 2018.
+              Brotherhood, leadership, and tradition. Building better men at ASU since 1951.
             </p>
             <div className="mt-10 flex justify-center gap-4">
               <a
@@ -136,6 +136,14 @@ export default function Home() {
           <span className="text-sm text-stone-500">
             Arizona State University · Tempe, Arizona
           </span>
+          <a
+            href="https://www.instagram.com/andywl27/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-stone-500 transition hover:text-[var(--gold)]"
+          >
+            Andrew Wladis TM
+          </a>
         </div>
       </footer>
     </div>
