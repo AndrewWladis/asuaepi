@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[var(--black-1)]">
@@ -96,6 +98,30 @@ export default function Home() {
               Rep ΑΕΠ with official chapter gear. Maroon &amp; gold.
             </p>
             <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {/* Drew Bronson Free Card - Sold out */}
+              <div className="group overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] transition hover:border-[var(--gold)]/40 hover:bg-[var(--surface-hover)]">
+                <div className="relative aspect-[3/4] overflow-hidden bg-[var(--black-4)]">
+                  <div className="absolute inset-0 p-2 transition-transform duration-300 ease-out group-hover:rotate-3">
+                    <Image
+                      src="/freecard.png"
+                      alt="Get into Drew Bronson's Unit Free Card"
+                      fill
+                      className="object-contain object-center"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                  <span className="absolute right-2 top-2 rounded bg-[var(--maroon)] px-2 py-1 text-xs font-bold uppercase tracking-wider text-white">
+                    Sold out
+                  </span>
+                </div>
+                <div className="p-4">
+                  <h3 className="text-display font-bold text-white">
+                    Get into Drew Bronson&apos;s Unit Free Card
+                  </h3>
+                  <p className="mt-1 text-sm text-stone-500">Keep this card until you need it.</p>
+                  <p className="mt-3 text-sm font-medium text-stone-500">Sold out</p>
+                </div>
+              </div>
               {[
                 { name: "Chapter Tee", price: "—", placeholder: "T-Shirt" },
                 { name: "Crewneck", price: "—", placeholder: "Crewneck" },
