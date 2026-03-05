@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Oswald } from "next/font/google";
+import { GingerCodeListener } from "./components/GingerCodeListener";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${oswald.variable} font-sans antialiased`}
       >
+        <GingerCodeListener />
         {children}
       </body>
     </html>
