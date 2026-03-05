@@ -82,7 +82,7 @@ export default function Home() {
               Alpha Epsilon Pi
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg text-stone-400">
-              Brotherhood, leadership, and tradition. Building better men at ASU since 1951.
+              The Jewish Fraternity
             </p>
             <div className="mt-10 flex justify-center gap-4">
               <a
