@@ -1,6 +1,48 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
+
+const SECRET_SEQUENCE = [
+  "ArrowUp",
+  "ArrowUp",
+  "ArrowDown",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowLeft",
+  "ArrowRight",
+  "ArrowRight",
+  "KeyB",
+  "KeyA",
+] as const;
 
 export default function Home() {
+  const router = useRouter();
+  const indexRef = useRef(0);
+
+  useEffect(() => {
+    const handleKey = (event: KeyboardEvent) => {
+      const expected = SECRET_SEQUENCE[indexRef.current];
+      const code = event.code;
+
+      if (code === expected) {
+        indexRef.current += 1;
+        if (indexRef.current === SECRET_SEQUENCE.length) {
+          indexRef.current = 0;
+          router.push("/ginger-shop");
+        }
+        return;
+      }
+
+      // Reset sequence, but allow immediate restart if they hit the first key again
+      indexRef.current = code === SECRET_SEQUENCE[0] ? 1 : 0;
+    };
+
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [router]);
+
   return (
     <div className="min-h-screen bg-[var(--black-1)]">
       {/* Navigation */}
