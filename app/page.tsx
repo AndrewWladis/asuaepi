@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const SECRET_SEQUENCE = [
@@ -20,6 +20,7 @@ const SECRET_SEQUENCE = [
 export default function Home() {
   const router = useRouter();
   const indexRef = useRef(0);
+  const [impactDragOver, setImpactDragOver] = useState(false);
 
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
@@ -122,7 +123,20 @@ export default function Home() {
                 <p className="leading-relaxed text-stone-400">
                   Founded at NYU in 1913, AEPi has grown into one of the nation&apos;s leading
                   fraternities. At ASU, we focus on academic excellence, philanthropy, and
-                  building lifelong bonds while making a positive impact on campus and the
+                  building lifelong bonds while making a positive{" "}
+                  <span
+                    draggable
+                    onDragStart={(e) => {
+                      e.dataTransfer.setData("text/plain", "Impact");
+                      e.dataTransfer.effectAllowed = "move";
+                    }}
+                    onDragEnd={() => setImpactDragOver(false)}
+                    className="select-none cursor-grab transition active:cursor-grabbing"
+                    title="Drag me"
+                  >
+                    impact
+                  </span>
+                  {" "}on campus and the
                   community.
                 </p>
               </div>
@@ -131,7 +145,27 @@ export default function Home() {
         </section>
 
         {/* Merch */}
-        <section id="merch" className="bg-[var(--black-3)] px-6 py-20 md:py-28">
+        <section
+          id="merch"
+          onDragOver={(e) => {
+            // Allow dropping the "Impact" token here.
+            e.preventDefault();
+            setImpactDragOver(true);
+          }}
+          onDragLeave={() => setImpactDragOver(false)}
+          onDrop={(e) => {
+            e.preventDefault();
+            setImpactDragOver(false);
+
+            const dropped = e.dataTransfer.getData("text/plain");
+            if (dropped === "Impact") {
+              router.push("/breakout");
+            }
+          }}
+          className={`bg-[var(--black-3)] px-6 py-20 md:py-28 transition ${
+            impactDragOver ? "outline outline-2 outline-[var(--gold)]/60" : ""
+          }`}
+        >
           <div className="mx-auto max-w-5xl">
             <h2 className="text-display text-3xl font-bold text-white md:text-4xl">
               Merch

@@ -24,7 +24,7 @@ export default function NotFound() {
           Page Not Found.
         </h1>
         <p className="max-w-md text-sm text-stone-400 sm:text-base">
-          The page you&apos;re looking for doesn&apos;t exist. While Ginger runs
+          The page you&apos;re looking for doesn&apos;t exist. While Ginger Cool runs
           around trying to find it, you can head back home.
         </p>
         <div className="flex justify-center">
