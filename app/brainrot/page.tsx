@@ -14,6 +14,7 @@ const PLAY_VIDEO_URL =
 const TRENDING_POSTERS = [
   { src: "/movieposters/0.png", alt: "Poster" },
   { src: "/movieposters/1.png", alt: "Poster" },
+  { src: "/movieposters/2.png", alt: "Poster" },
 ];
 
 function NavIcon({
