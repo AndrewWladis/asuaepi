@@ -9,12 +9,14 @@ export const metadata: Metadata = {
 const HERO_SRC = "/gingercoolmovie.png";
 
 const PLAY_VIDEO_URL =
-  "https://drive.google.com/file/d/1P7alWwlKRF87rZG6d9cpO3jY_QP0haql/view?usp=sharing";
+  "https://drive.google.com/file/d/1Lo7sC3r5m34y5jP3TXc47h2fLlh2e9q6/view?usp=sharing";
 
 const TRENDING_POSTERS = [
   { src: "/movieposters/0.png", alt: "Poster" },
   { src: "/movieposters/1.png", alt: "Poster" },
   { src: "/movieposters/2.png", alt: "Poster" },
+  { src: "/movieposters/3.png", alt: "Poster" },
+
 ];
 
 function NavIcon({
@@ -133,7 +135,7 @@ export default function BrainrotPage() {
                 <span className="flex h-5 w-5 items-center justify-center rounded bg-[#e50914] text-[10px] font-bold text-white">
                   N
                 </span>
-                <span className="uppercase tracking-[0.2em] text-white/90">Series</span>
+                <span className="uppercase tracking-[0.2em] text-white/90">Orginal</span>
               </div>
 
               <h1
@@ -153,7 +155,7 @@ export default function BrainrotPage() {
                 <span className="rounded border border-white/30 bg-black/40 px-1.5 py-0.5 text-xs font-bold uppercase text-[#e50914]">
                   Top 10
                 </span>
-                <span className="text-white/95">#1 in TV Shows Today</span>
+                <span className="text-white/95">#1 in Movies Today</span>
               </p>
 
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-200 shadow-black drop-shadow-md sm:text-[15px]">
@@ -182,7 +184,7 @@ export default function BrainrotPage() {
             </div>
 
             <div className="absolute bottom-6 right-8 z-10 border-l-4 border-white bg-black/50 px-3 py-1 text-xs font-medium text-white">
-              TV-14
+              PG-13
             </div>
           </section>
 
