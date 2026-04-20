@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const HERO_SRC = "/gingercoolmovie.png";
 
 const PLAY_VIDEO_URL =
-  "https://drive.google.com/file/d/1Lo7sC3r5m34y5jP3TXc47h2fLlh2e9q6/view?usp=sharing";
+  "https://drive.google.com/file/d/1iQnrHZogjIGpeF7ZqrvfeZaxAHSJyLdI/view?usp=sharing";
 
 const TRENDING_POSTERS = [
   { src: "/movieposters/0.png", alt: "Poster" },
