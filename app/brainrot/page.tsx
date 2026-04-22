@@ -16,6 +16,7 @@ const TRENDING_POSTERS = [
   { src: "/movieposters/1.png", alt: "Poster" },
   { src: "/movieposters/2.png", alt: "Poster" },
   { src: "/movieposters/3.png", alt: "Poster" },
+  { src: "/movieposters/4.png", alt: "Poster" },
 
 ];
 
