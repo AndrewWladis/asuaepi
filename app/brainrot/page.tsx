@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const HERO_SRC = "/gingercoolmovie.png";
+const HERO_SRC = "/cover.png";
 
 const PLAY_VIDEO_URL =
   "https://drive.google.com/file/d/1iQnrHZogjIGpeF7ZqrvfeZaxAHSJyLdI/view?usp=sharing";
@@ -17,6 +17,7 @@ const TRENDING_POSTERS = [
   { src: "/movieposters/2.png", alt: "Poster" },
   { src: "/movieposters/3.png", alt: "Poster" },
   { src: "/movieposters/4.png", alt: "Poster" },
+  { src: "/movieposters/5.png", alt: "Poster" },
 
 ];
 
@@ -140,15 +141,15 @@ export default function BrainrotPage() {
               </div>
 
               <h1
-                className="font-display text-5xl font-bold uppercase italic leading-none tracking-tight text-[#e50914] drop-shadow-[0_2px_0_rgba(0,0,0,0.8)] sm:text-6xl md:text-7xl"
+                className="font-display text-5xl font-bold uppercase italic leading-none tracking-tight text-[#e50914] drop-shadow-[0_2px_0_rgba(0,0,0,0.8)] sm:text-5xl md:text-5xl"
                 style={{
                   textShadow:
                     "2px 2px 0 #3a0609, -1px -1px 0 #3a0609, 1px -1px 0 #3a0609, -1px 1px 0 #3a0609",
                 }}
               >
-                Ginger Cool:
+                Ginger Cool Part 2:
                 <br />
-                The Movie
+                The Revenge of Zeev
            
               </h1>
 
@@ -160,21 +161,11 @@ export default function BrainrotPage() {
               </p>
 
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-200 shadow-black drop-shadow-md sm:text-[15px]">
-                Andrew Wladis, Julian Lewkowicz, and Daniel Weiner present the first thrilling installment of the Ginger Cool Cinematic Universe: <i>Ginger Cool: The Movie</i>.
+                When Backwards Borgsdale and Zeev team up, Ginger Cool must oppose them, even if it means risking his life.
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
-                <a
-                  href={PLAY_VIDEO_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="pointer-events-auto flex items-center gap-2 rounded bg-white px-7 py-2.5 text-base font-semibold text-black shadow-lg"
-                >
-                  <svg className="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                  Play
-                </a>
+                  Coming Soon
                 <div className="flex items-center gap-2 rounded bg-white/20 px-6 py-2.5 text-base font-semibold text-white backdrop-blur-sm">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white text-lg font-light">
                     i
