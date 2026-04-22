@@ -12,12 +12,14 @@ const PLAY_VIDEO_URL =
   "https://drive.google.com/file/d/1iQnrHZogjIGpeF7ZqrvfeZaxAHSJyLdI/view?usp=sharing";
 
 const TRENDING_POSTERS = [
-  { src: "/movieposters/0.png", alt: "Poster" },
-  { src: "/movieposters/1.png", alt: "Poster" },
-  { src: "/movieposters/2.png", alt: "Poster" },
-  { src: "/movieposters/3.png", alt: "Poster" },
-  { src: "/movieposters/4.png", alt: "Poster" },
+  { src: "/movieposters/6.png", alt: "Poster" },
   { src: "/movieposters/5.png", alt: "Poster" },
+  { src: "/movieposters/4.png", alt: "Poster" },
+  { src: "/movieposters/3.png", alt: "Poster" },
+  { src: "/movieposters/2.png", alt: "Poster" },
+  { src: "/movieposters/1.png", alt: "Poster" },
+  { src: "/movieposters/0.png", alt: "Poster" },
+
 
 ];
 
