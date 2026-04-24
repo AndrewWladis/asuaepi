@@ -12,6 +12,7 @@ const PLAY_VIDEO_URL =
   "https://drive.google.com/file/d/1iQnrHZogjIGpeF7ZqrvfeZaxAHSJyLdI/view?usp=sharing";
 
 const TRENDING_POSTERS = [
+  { src: "/movieposters/7.png", alt: "Poster" },
   { src: "/movieposters/6.png", alt: "Poster" },
   { src: "/movieposters/5.png", alt: "Poster" },
   { src: "/movieposters/4.png", alt: "Poster" },
