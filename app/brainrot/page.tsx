@@ -1,27 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Netflix | Brainrot",
   robots: { index: false, follow: false },
 };
 
-const HERO_SRC = "/cover.png";
+const HERO_SRC = "/baden.png";
 
-const PLAY_VIDEO_URL =
-  "https://drive.google.com/file/d/1iQnrHZogjIGpeF7ZqrvfeZaxAHSJyLdI/view?usp=sharing";
 
 const TRENDING_POSTERS = [
-  { src: "/movieposters/7.png", alt: "Poster" },
-  { src: "/movieposters/6.png", alt: "Poster" },
-  { src: "/movieposters/5.png", alt: "Poster" },
-  { src: "/movieposters/4.png", alt: "Poster" },
-  { src: "/movieposters/3.png", alt: "Poster" },
-  { src: "/movieposters/2.png", alt: "Poster" },
-  { src: "/movieposters/1.png", alt: "Poster" },
-  { src: "/movieposters/0.png", alt: "Poster" },
-
-
+  { src: "/movieposters/mintwarsgingercool.png", alt: "Ginger Cool poster", href: "https://drive.google.com/file/d/1iQnrHZogjIGpeF7ZqrvfeZaxAHSJyLdI/view?usp=sharing" },
+  { src: "/movieposters/trailer.png", alt: "Trailer poster", href: "https://drive.google.com/file/d/1lJBqKIotb0CBu5OoVQVOkOwXl7dVvs77/view?usp=sharing" },
 ];
 
 function NavIcon({
@@ -46,7 +37,7 @@ function NavIcon({
 
 export default function BrainrotPage() {
   return (
-    <div className="pointer-events-none min-h-screen select-none bg-black font-sans text-white">
+    <div className="min-h-screen select-none bg-black font-sans text-white">
       <div className="flex min-h-screen">
         {/* Left rail */}
         <aside className="flex w-[52px] shrink-0 flex-col items-center gap-5 border-r border-white/5 bg-black/80 py-6 backdrop-blur-sm">
@@ -150,9 +141,7 @@ export default function BrainrotPage() {
                     "2px 2px 0 #3a0609, -1px -1px 0 #3a0609, 1px -1px 0 #3a0609, -1px 1px 0 #3a0609",
                 }}
               >
-                Ginger Cool Part 2:
-                <br />
-                The Revenge of Zeev
+                Zach Baden Movie
            
               </h1>
 
@@ -164,7 +153,7 @@ export default function BrainrotPage() {
               </p>
 
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-200 shadow-black drop-shadow-md sm:text-[15px]">
-                When Backwards Borgsdale and Zeev team up, Ginger Cool must oppose them, even if it means risking his life.
+                Meet Zach Baden, a young man who is determined to make a name for himself in this big world.
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -185,25 +174,25 @@ export default function BrainrotPage() {
 
           {/* Trending row */}
           <section className="relative z-20 -mt-2 flex flex-col gap-3 bg-black px-8 pb-10 pt-2 sm:px-12 lg:px-16">
-            <h2 className="text-lg font-semibold text-zinc-100">Trending Now</h2>
+            <h2 className="text-lg font-semibold text-zinc-100">Ginger Cool Universe in Timeline Order</h2>
             <div className="flex gap-2 overflow-hidden">
               {TRENDING_POSTERS.map((p, i) => (
-                <div
+                <Link
                   key={i}
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="relative aspect-2/3 w-[min(22vw,140px)] shrink-0 overflow-hidden rounded bg-zinc-900 shadow-lg ring-1 ring-white/10"
                 >
                   <Image
                     src={p.src}
-                    alt=""
+                    alt={p.alt}
                     fill
                     className="object-cover"
                     sizes="140px"
                     unoptimized={p.src.startsWith("http")}
                   />
-                  <span className="absolute left-1.5 top-1.5 flex h-5 w-5 items-center justify-center rounded bg-[#e50914] text-[9px] font-bold">
-                    N
-                  </span>
-                </div>
+                </Link>
               ))}
             </div>
           </section>
