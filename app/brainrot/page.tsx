@@ -7,12 +7,13 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const HERO_SRC = "/baden.png";
+const HERO_SRC = "/gingercoolmovie.png";
 
 
 const TRENDING_POSTERS = [
   { src: "/movieposters/mintwarsgingercool.png", alt: "Ginger Cool poster", href: "https://drive.google.com/file/d/1iQnrHZogjIGpeF7ZqrvfeZaxAHSJyLdI/view?usp=sharing" },
   { src: "/movieposters/trailer.png", alt: "Trailer poster", href: "https://drive.google.com/file/d/1lJBqKIotb0CBu5OoVQVOkOwXl7dVvs77/view?usp=sharing" },
+  { src: "/movieposters/gc2.png", alt: "GC2", href: "https://drive.google.com/file/d/11pPqQwoepVl-M465GOvH3_dwVooP2v1A/view?usp=drive_link" },
 ];
 
 function NavIcon({
@@ -141,7 +142,8 @@ export default function BrainrotPage() {
                     "2px 2px 0 #3a0609, -1px -1px 0 #3a0609, 1px -1px 0 #3a0609, -1px 1px 0 #3a0609",
                 }}
               >
-                Zach Baden Movie
+                Ginger Cool Part 2:
+                Revenge of Zeev
            
               </h1>
 
@@ -153,11 +155,21 @@ export default function BrainrotPage() {
               </p>
 
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-200 shadow-black drop-shadow-md sm:text-[15px]">
-                Meet Zach Baden, a young man who is determined to make a name for himself in this big world.
+                When Backwards Borgsdale and Zeev team up, the only man who can possibly save the day is Ginger Cool. But will he be able to stop them before it's too late?
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
-                  Coming Soon
+              <a
+                  href={"https://drive.google.com/file/d/11pPqQwoepVl-M465GOvH3_dwVooP2v1A/view?usp=drive_link"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pointer-events-auto flex items-center gap-2 rounded bg-white px-7 py-2.5 text-base font-semibold text-black shadow-lg"
+                >
+                  <svg className="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                  Play
+                </a>
                 <div className="flex items-center gap-2 rounded bg-white/20 px-6 py-2.5 text-base font-semibold text-white backdrop-blur-sm">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white text-lg font-light">
                     i
