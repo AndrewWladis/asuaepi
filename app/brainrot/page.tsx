@@ -13,7 +13,7 @@ const HERO_SRC = "/gingercoolmovie.png";
 const TRENDING_POSTERS = [
   { src: "/movieposters/mintwarsgingercool.png", alt: "Ginger Cool poster", href: "https://drive.google.com/file/d/1iQnrHZogjIGpeF7ZqrvfeZaxAHSJyLdI/view?usp=sharing" },
   { src: "/movieposters/trailer.png", alt: "Trailer poster", href: "https://drive.google.com/file/d/1lJBqKIotb0CBu5OoVQVOkOwXl7dVvs77/view?usp=sharing" },
-  { src: "/movieposters/gc2.png", alt: "GC2", href: "https://drive.google.com/file/d/11pPqQwoepVl-M465GOvH3_dwVooP2v1A/view?usp=drive_link" },
+  { src: "/movieposters/6.png", alt: "GC2", href: "https://drive.google.com/file/d/11pPqQwoepVl-M465GOvH3_dwVooP2v1A/view?usp=drive_link" },
 ];
 
 function NavIcon({
