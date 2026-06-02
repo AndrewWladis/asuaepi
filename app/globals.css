@@ -37,6 +37,20 @@
   image-rendering: pixelated;
 }
 
+@keyframes start-prompt-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.start-prompt-blink {
+  animation: start-prompt-blink 3.2s ease-in-out infinite;
+}
+
 html {
   scroll-behavior: smooth;
 }
