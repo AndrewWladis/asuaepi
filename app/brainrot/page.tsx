@@ -12,8 +12,8 @@ const HERO_SRC = "/gingercoolmovie.png";
 
 const TRENDING_POSTERS = [
   { src: "/movieposters/mintwarsgingercool.png", alt: "Ginger Cool poster", href: "https://drive.google.com/file/d/1iQnrHZogjIGpeF7ZqrvfeZaxAHSJyLdI/view?usp=sharing" },
-  { src: "/movieposters/trailer.png", alt: "Trailer poster", href: "https://drive.google.com/file/d/1lJBqKIotb0CBu5OoVQVOkOwXl7dVvs77/view?usp=sharing" },
   { src: "/movieposters/gc2rov.png", alt: "GC2", href: "https://drive.google.com/file/d/11pPqQwoepVl-M465GOvH3_dwVooP2v1A/view?usp=drive_link" },
+  { src: "/movieposters/gc3.png", alt: "GC3", href: "https://drive.google.com/file/d/1jifEqpeOCNfzip5SGRfq8JhSTWn_WVCF/view?usp=sharing" },
 ];
 
 function NavIcon({
@@ -128,39 +128,31 @@ export default function BrainrotPage() {
             </div>
 
             <div className="relative z-10 flex h-full max-w-2xl flex-col justify-end px-8 pb-10 pt-24 sm:px-12 lg:px-16 lg:pb-14">
-              <div className="mb-3 flex items-center gap-2 text-sm font-medium tracking-wide">
-                <span className="flex h-5 w-5 items-center justify-center rounded bg-[#e50914] text-[10px] font-bold text-white">
-                  N
-                </span>
-                <span className="uppercase tracking-[0.2em] text-white/90">Orginal</span>
-              </div>
 
               <h1
-                className="font-display text-5xl font-bold uppercase italic leading-none tracking-tight text-[#e50914] drop-shadow-[0_2px_0_rgba(0,0,0,0.8)] sm:text-5xl md:text-5xl"
+                className="font-display text-6xl font-bold uppercase italic leading-none tracking-tight text-[#e50914] drop-shadow-[0_2px_0_rgba(0,0,0,0.8)] sm:text-7xl md:text-8xl"
                 style={{
                   textShadow:
                     "2px 2px 0 #3a0609, -1px -1px 0 #3a0609, 1px -1px 0 #3a0609, -1px 1px 0 #3a0609",
                 }}
               >
-                Ginger Cool Part 2:
-                Revenge of Zeev
-           
+                GC3
               </h1>
 
-              <p className="mt-4 flex items-center gap-2 text-sm text-white sm:text-base">
-                <span className="rounded border border-white/30 bg-black/40 px-1.5 py-0.5 text-xs font-bold uppercase text-[#e50914]">
+              <p className="mt-4 flex items-center gap-2 text-base text-white sm:text-lg">
+                <span className="rounded border border-white/30 bg-black/40 px-2 py-1 text-[11px] font-bold uppercase text-[#e50914] sm:text-xs">
                   Top 10
                 </span>
                 <span className="text-white/95">#1 in Movies Today</span>
               </p>
 
-              <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-200 shadow-black drop-shadow-md sm:text-[15px]">
-                When Backwards Borgsdale and Zeev team up, the only man who can possibly save the day is Ginger Cool. But will he be able to stop them before it's too late?
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-zinc-200 shadow-black drop-shadow-md sm:text-lg">
+                Witness the thrilling conclusion of the Ginger Cool saga in GC3, where Ginger Cool TM must face his ultimate challenge, himself.
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
               <a
-                  href={"https://drive.google.com/file/d/11pPqQwoepVl-M465GOvH3_dwVooP2v1A/view?usp=drive_link"}
+                  href={"https://drive.google.com/file/d/1jifEqpeOCNfzip5SGRfq8JhSTWn_WVCF/view?usp=sharing"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="pointer-events-auto flex items-center gap-2 rounded bg-white px-7 py-2.5 text-base font-semibold text-black shadow-lg"
@@ -179,29 +171,26 @@ export default function BrainrotPage() {
               </div>
             </div>
 
-            <div className="absolute bottom-6 right-8 z-10 border-l-4 border-white bg-black/50 px-3 py-1 text-xs font-medium text-white">
-              PG-13
-            </div>
           </section>
 
           {/* Trending row */}
           <section className="relative z-20 -mt-2 flex flex-col gap-3 bg-black px-8 pb-10 pt-2 sm:px-12 lg:px-16">
-            <h2 className="text-lg font-semibold text-zinc-100">Ginger Cool Universe in Timeline Order</h2>
-            <div className="flex gap-2 overflow-hidden">
+            <h2 className="text-xl font-semibold text-zinc-100 sm:text-2xl">Ginger Cool Universe in Timeline Order</h2>
+            <div className="flex gap-3 overflow-hidden">
               {TRENDING_POSTERS.map((p, i) => (
                 <Link
                   key={i}
                   href={p.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative aspect-2/3 w-[min(22vw,140px)] shrink-0 overflow-hidden rounded bg-zinc-900 shadow-lg ring-1 ring-white/10"
+                  className="relative aspect-2/3 w-[min(24vw,180px)] shrink-0 overflow-hidden rounded bg-zinc-900 shadow-lg ring-1 ring-white/10 sm:w-[min(22vw,190px)]"
                 >
                   <Image
                     src={p.src}
                     alt={p.alt}
                     fill
                     className="object-cover"
-                    sizes="140px"
+                    sizes="180px"
                     unoptimized={p.src.startsWith("http")}
                   />
                 </Link>
